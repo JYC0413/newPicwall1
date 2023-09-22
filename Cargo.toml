@@ -1,0 +1,20 @@
+[package]
+name = "text-detection-lambda"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+http_req_wasi = { version = "0.10", features = ["wasmedge_ssl"] }
+lambda-flows = "0.3"
+google-cloud-service-flows = "0.1"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+flowsnet-platform-sdk = "0.1"
+log = "0.4"
+openai-flows = "0.8"
+tokio_wasi = { version = "1.25.1", features = ["macros", "rt"] }

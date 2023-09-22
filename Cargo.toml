@@ -1,0 +1,17 @@
+[package]
+name = "discord-claude"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+discord-flows = "0.4"
+claude-flows = "0.1"
+flowsnet-platform-sdk = "0.1.4"
+log = "0.4"
+serde_json = "1.0.96"
+tokio_wasi = { version = "1.25.0", features = ["rt", "macros"] }
